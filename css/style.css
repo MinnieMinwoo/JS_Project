@@ -3,6 +3,19 @@
     font-family: 'Noto Sans KR', sans-serif;
 }
 
+.hidden {
+    display: none;
+}
+
+
+.grid {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    text-align: center;
+    margin-bottom: -3rem;
+}
+
 #clock {
     font-size: 8rem;
     margin-bottom: 0px;
@@ -18,23 +31,11 @@
     font-size: 1.5rem;
 }
 
-.grid {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.hidden {
-    display: none;
-}
-
 input{
     border: 0px;
-    width: 40rem;
-    background-color: transparent;
+    width: 80%;
     text-align: center;
+    background-color: transparent;
     text-decoration: underline;
     font-size: 2rem;
 }
@@ -45,4 +46,19 @@ input:focus {
 
 input::placeholder {
     color: aliceblue;
+}
+
+#quote {
+    font-size: 1.5rem;
+}
+
+#weather {
+    margin-top: 0px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+#todo-list {
+    font-size: 1.5rem;
 }
