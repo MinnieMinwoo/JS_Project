@@ -25,12 +25,20 @@ function createToDo(newTodo) {
     li.id = newTodo.id;
     const span = document.createElement("span");
     span.innerText = newTodo.text;
-    const button = document.createElement("button");
-    button.innerText = "❌";
+    const button = createButton();
     button.addEventListener("click", deleteToDo);
     li.appendChild(span);
     li.appendChild(button);
     toDoList.appendChild(li);
+}
+
+function createButton() {
+    const button = document.createElement("button");
+    button.innerText = "X";
+    button.style.border = "solid aliceblue 2px";
+    button.style.float = "right";
+    button.style.backgroundColor = "transparent";
+    return button;
 }
 
 //create ToDo object and submit
