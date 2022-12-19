@@ -1,5 +1,5 @@
 * {
-    color: blue;
+    color: aliceblue;
     font-family: 'Noto Sans KR', sans-serif;
 }
 
@@ -33,6 +33,7 @@
 input{
     border: 0px;
     width: 40rem;
+    background-color: transparent;
     text-align: center;
     text-decoration: underline;
     font-size: 2rem;
@@ -43,5 +44,5 @@ input:focus {
 }
 
 input::placeholder {
-    color: blue;
+    color: aliceblue;
 }
