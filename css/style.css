@@ -7,33 +7,41 @@
     display: none;
 }
 
+.flexMain {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
 
-.grid {
-    position: relative;
-    left: 50%;
-    transform: translate(-50%, -20%);
-    text-align: center;
-    margin-bottom: -3rem;
+.flexMainItem {
+    flex-basis: 60%;
 }
 
 #clock {
     font-size: 8rem;
-    margin-bottom: 0px;
+    padding: 0;
+    margin: 0 0;
+}
+
+.loginButton {
+    border: solid aliceblue 2px;
+    text-decoration: none;
 }
 
 #greeting {
-    margin-top: 0px;
     font-size: 4rem;
+    margin-top: 0;
     margin-bottom: 10px;
 }
 
 #quote {
     font-size: 1.5rem;
+    margin-top: 5px;
+    text-align: center;
 }
 
 input{
     border: 0px;
-    width: 80%;
     text-align: center;
     background-color: transparent;
     text-decoration: underline;
@@ -48,20 +56,32 @@ input::placeholder {
     color: aliceblue;
 }
 
+#todo-form{
+    width: 100%;
+}
+
+#todo-form input {
+    width: 100%;
+}
+
 #quote {
     font-size: 1.5rem;
 }
 
 #weather {
-    margin-top: 0px;
+    margin-top: 10px;
     font-size: 2rem;
     font-weight: bold;
-    text-align: center;
 }
 
 #todo-list {
     font-size: 1.5rem;
-    margin-top: 2rem;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-top: 10px;
+    width: 80%;
+    text-align: left;
+}
+
+#todo-list li {
+    display: flex;
+    justify-content: space-between;
 }

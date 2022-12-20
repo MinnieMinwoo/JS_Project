@@ -25,6 +25,8 @@ function createToDo(newTodo) {
     li.id = newTodo.id;
     const span = document.createElement("span");
     span.innerText = newTodo.text;
+    span.style.width = "90%"
+    span.style.overflow = "hidden";
     const button = createButton();
     button.addEventListener("click", deleteToDo);
     li.appendChild(span);
@@ -36,8 +38,10 @@ function createButton() {
     const button = document.createElement("button");
     button.innerText = "X";
     button.style.border = "solid aliceblue 2px";
-    button.style.float = "right";
+    button.style.margin = "1px";
+    button.style.width = "33px"
     button.style.backgroundColor = "transparent";
+    button.style.flexShrink = "0";
     return button;
 }
 

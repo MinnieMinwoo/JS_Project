@@ -9,12 +9,12 @@
         <title>JS Clone App</title>
     </head>
     <body>
-        <!-- main display area -->
-        <div class="grid">
+        <div class="flexMain">
+            <!-- main display area -->
             <h2 id="clock">00:00</h2>
             <form id='login-form' class="hidden">
                 <input required maxlength="15" type="text" placeholder="What is your name?">
-                <input type="submit" value="Log In">
+                <input class="loginButton" type="submit" value="Enter">
             </form>
             <h1 id="greeting" class="hidden"></h1>
             <form id="todo-form">
@@ -24,15 +24,15 @@
                 <div></div>
                 <div></div>
             </div>
+            <!-- weather display area-->
+            <div id="weather">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!-- todo display area -->
+            <ul id="todo-list"></ul>
         </div>
-        <!-- weather display area-->
-        <div id="weather">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <!-- todo display area -->
-        <ul id="todo-list"></ul>
         <script src="js/greetings.js"></script>  
         <script src="js/clock.js"></script>
         <script src="js/quotes.js"></script> 
