@@ -1,17 +1,82 @@
-#head {
-    margin: 0;
-    border: 0;
-    display: flex;
-    justify-content: space-between;
+* {
+    font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
+body {
+    background-color: hsl(210, 60%, 98%);
+}
+
+#background {
+    background-color: hsl(0, 0%, 100%);
+    margin: 2.5% 20%;
+    border-radius: 20px;
+}
+
+#head {
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#head #notify{
+    font-weight: bold;
+    font-size: 25px;
+    flex-basis: 115px;
+    height: 40px;
+    line-height: 40px;
+}
+
+#head #num {
+    background-color: hsl(219, 85%, 26%);
+    color: hsl(0, 0%, 100%);
+    text-align: center;
+    flex-basis: 45px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 5px;
+    font-size: 20px;
+    margin: 0 10px;
+}
 #head #allRead {
     flex-grow: 1;
+    background-color: transparent;
+    color: hsl(219, 12%, 42%);
+    font-size: 16px;
+    border: 0px;
     text-align: right;
 }
 
+#head #allRead:hover{
+    text-decoration: underline;
+}
+
+
+#body {
+    font-size: 16px;
+    padding: 0 20px 30px 20px;
+}
+
+#body li {
+    list-style: none;
+    background-color: hsl(211, 68%, 94%);
+    border-radius: 10px;
+    padding: 5px 15px;
+    margin: 10px 0px;
+}
+
+#body .read {
+    background-color: hsl(0, 0%, 100%);
+}
+
+#body li:hover {
+    background-color: hsl(205, 33%, 90%);
+}
+
 .attribution {
-    font-size: 11px; text-align: center;
+    font-size: 11px;
+    text-align: center;
+    padding-bottom: 20px;
 }
 .attribution a {
     color: hsl(228, 45%, 44%);
