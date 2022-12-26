@@ -1,3 +1,15 @@
+#head {
+    margin: 0;
+    border: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#head #allRead {
+    flex-grow: 1;
+    text-align: right;
+}
+
 .attribution {
     font-size: 11px; text-align: center;
 }

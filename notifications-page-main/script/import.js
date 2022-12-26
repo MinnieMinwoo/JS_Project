@@ -75,3 +75,4 @@ function pushData(obj) {
 
 importData(dataArr);
 dataArr.forEach(e => { pushData(e); });
+checkNum ();
