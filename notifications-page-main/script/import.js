@@ -48,7 +48,6 @@ function importData(arr) {
         const inputElement = new notifyItem(e.data, e.time, e.detail);
         notifyArr.push(inputElement);
     });
-    console.log(notifyArr);
 }
 
 function createList(obj) {
@@ -71,6 +70,7 @@ function pushData(obj) {
     const ul = document.querySelector("ul");
     const li = createList(obj);
     ul.appendChild(li);
+    li.addEventListener('click', setRead);
 }
 
 importData(dataArr);
