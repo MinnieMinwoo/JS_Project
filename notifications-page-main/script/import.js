@@ -1,30 +1,48 @@
 let dataArr = [
-    {
+    {   
+        user: "Mark Webber",
+        type: "react",
+        post: "My first tournament today!",
         data: "Mark Webber reacted to your recent post My first tournament today!",
         time: "1m ago",
     },
     {
+        user: "Angela Gray",
+        type: "follow",
         data: "Angela Gray followed you",
         time: "5m ago",
     },
     {
+        user: "Jacob Thompson",
+        type: "join",
+        group: "Chess Club",
         data: "Jacob Thompson has joined your group Chess Club",
         time: "1 day ago",
     },
     {
+        user: "Rizky Hasanuddin",
+        type: "message",
+        message: "Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.",
         data: "Rizky Hasanuddin sent you a private message",
         time: "5 days ago",
-        detail: "Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.",
     },
     {
+        user: "Kimberly Smith",
+        type: "commentPicture",
         data: "Kimberly Smith commented on your picture",
         time: "1 week ago",
     },
     {
+        user: "Nathan Peterson",
+        type: "react",
+        post: "5 end-game strategies to increase your win rate",
         data: "Nathan Peterson reacted to your recent post 5 end-game strategies to increase your win rate",
         time: "2 weeks ago",
     },
     {
+        user: "Anna Kim",
+        type: "left",
+        group: "Chess Club",
         data: "Anna Kim left the group Chess Club",
         time: "2 weeks ago",
     }
@@ -32,7 +50,6 @@ let dataArr = [
 ];
 
 let notifyArr =[];
-
 
 function notifyItem(data, time, detail) {
     this.data = data;
@@ -52,18 +69,47 @@ function importData(arr) {
 
 function createList(obj) {
     const li = document.createElement("li");
-    const textData = document.createElement("p");
-    const timeData = document.createElement("p");
-    textData.innerText = obj.data;
-    timeData.innerText = obj.time;
-    li.appendChild(textData);
-    li.appendChild(timeData);
-    if (obj.detail !== "") {
-        const detailData = document.createElement("p");
-        detailData.innerText = obj.detail;
-        li.appendChild(detailData);
+    
+    const nameSpan = document.createElement("span");
+    const dataSpan = document.createElement("span");
+    const detailSpan = document.createElement("span");
+    const messagePart = document.createElement("p");
+    const timePart = document.createElement("p");
+
+    timePart.innerText = obj.time;
+    nameSpan.innerText = obj.user;
+    switch (obj.type) {
+        case "join":
+            dataSpan.innerText = ` has joined your group`;
+            detailSpan.innerText = ` ${obj.group}`;
+            break;
+        case "left":
+            dataSpan.innerText = ` left the group`;
+            detailSpan.innerText = ` ${obj.group}`;
+            break;
+        case "react":
+            dataSpan.innerText = ` reacted to your recent post`;
+            detailSpan.innerText = ` ${obj.post}`;
+            break;
+        case "commentPicture":
+            dataSpan.innerText = ` commented on your picture`;
+            break;
+        case "follow":
+            dataSpan.innerText = ` followed you`;
+            break;
+        case "message":
+            dataSpan.innerText = ` Rizky Hasanuddin sent you a private message`;
+            messagePart.innerText = ` ${obj.message}`;
+            break;
+        default:
+            break;
     }
-    return li;
+
+    li.appendChild(nameSpan);
+    li.appendChild(dataSpan);
+    if (detailSpan.innerText !== "") { console.log("Test"); li.appendChild(detailSpan)}
+    li.appendChild(timePart);
+    if (messagePart.innerText !== "") { li.appendChild(messagePart); }
 }
 
 function pushData(obj) {
