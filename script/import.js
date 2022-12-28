@@ -136,9 +136,10 @@ function createList(obj) {
     timePart.style.color = "hsl(219, 12%, 42%)";
     if (messagePart !== undefined) {
         messagePart.style.marginBottom = "5px";
+        messagePart.style.padding = "10px";
+        messagePart.style.borderRadius = "5px";
         messagePart.style.color = "hsl(219, 12%, 42%)";
         messagePart.style.border = "1px solid hsl(219, 14%, 63%)";
-        messagePart.style.borderRadius = "5px";
     }
     if (obj.replyPicture !== undefined) {
         commentSpan.style.marginTop = "5px";
