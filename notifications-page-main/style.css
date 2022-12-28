@@ -82,10 +82,6 @@ body {
     background-color: hsl(205, 33%, 90%);
 }
 
-#body .readDot.read {
-    display: none;
-}
-
 .attribution {
     font-size: 11px;
     text-align: center;

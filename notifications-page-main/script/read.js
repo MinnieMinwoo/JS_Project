@@ -3,8 +3,7 @@ function addReadClass() {
     this.classList.add('read');
     for (element of this.childNodes) {
         if (element.classList.contains("readDot")) { 
-            element.classList.add('read');
-            console.log(element);
+            element.style.display = "none";
             break;
         }
     }
