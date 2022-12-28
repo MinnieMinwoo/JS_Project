@@ -67,11 +67,14 @@ function createList(obj) {
     const nameSpan = document.createElement("span");
     const dataSpan = document.createElement("span");
     const detailSpan = document.createElement("span");
+    const readSpan = document.createElement("span");
     const messagePart = document.createElement("p");
     const timePart = document.createElement("p");
 
     timePart.innerText = obj.time;
     nameSpan.innerText = obj.user;
+    readSpan.innerText = " ●";
+    readSpan.classList.add('readDot');
 
     //set html
     switch (obj.type) {
@@ -104,10 +107,10 @@ function createList(obj) {
     //set css
     nameSpan.style.fontWeight = "bold";
     dataSpan.style.color = "hsl(219, 12%, 42%)";
-    console.log(obj.group)
     if (obj.group !== undefined) {detailSpan.style.color = "hsl(219, 85%, 26%)"; }
     else {detailSpan.style.color = "hsl(224, 21%, 14%)"; }
     detailSpan.style.fontWeight = "bold";
+    readSpan.style.color = "hsl(1, 90%, 64%)";
     timePart.style.color = "hsl(219, 12%, 42%)";
     if (messagePart !== undefined) {
         messagePart.style.color = "hsl(219, 12%, 42%)";
@@ -118,7 +121,8 @@ function createList(obj) {
     //apply and return
     li.appendChild(nameSpan);
     li.appendChild(dataSpan);
-    if (detailSpan.innerText !== "") { li.appendChild(detailSpan)}
+    if (detailSpan.innerText !== "") { li.appendChild(detailSpan); }
+    li.appendChild(readSpan);
     li.appendChild(timePart);
     if (messagePart.innerText !== "") { li.appendChild(messagePart); }
 
