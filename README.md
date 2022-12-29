@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Repistory](https://github.com/MinnieMinwoo/JS_Practice)
-- Live Site URL: [Web Page](https://minnieminwoo.github.io/JS_Practice/)
+- Solution URL: [Repistory](https://github.com/MinnieMinwoo/JS_Practice_Notifications_Page)
+- Live Site URL: [Web Page](https://minnieminwoo.github.io/JS_Practice_Notifications_Page/)
 
 ## My process
 
