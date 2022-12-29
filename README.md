@@ -31,12 +31,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./screenshot.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/MinnieMinwoo/JS_Practice)
-- Live Site URL: [Add live site URL here](https://minnieminwoo.github.io/JS_Practice/)
+- Solution URL: [Repistory](https://github.com/MinnieMinwoo/JS_Practice)
+- Live Site URL: [Web Page](https://minnieminwoo.github.io/JS_Practice/)
 
 ## My process
 
