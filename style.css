@@ -82,6 +82,10 @@ body {
     background-color: hsl(205, 33%, 90%);
 }
 
+#body > li.read > span:nth-child(2) > span.readDot {
+    display: none;
+}
+
 .attribution {
     font-size: 11px;
     text-align: center;
